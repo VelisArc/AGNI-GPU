@@ -1,0 +1,45 @@
+========================================
+ AGNI TB: Tensor Core MMA Test (4x4x4)
+========================================
+
+[TEST] Unit MMA: A=1, B=1, C=0 → D should be 4.0
+  D[0][0] = xxxxxxxx
+  D[0][1] = xxxxxxxx
+  D[0][2] = xxxxxxxx
+  D[0][3] = xxxxxxxx
+  D[1][0] = xxxxxxxx
+  D[1][1] = xxxxxxxx
+  D[1][2] = xxxxxxxx
+  D[1][3] = xxxxxxxx
+  D[2][0] = xxxxxxxx
+  D[2][1] = xxxxxxxx
+  D[2][2] = xxxxxxxx
+  D[2][3] = xxxxxxxx
+  D[3][0] = xxxxxxxx
+  D[3][1] = xxxxxxxx
+  D[3][2] = xxxxxxxx
+  D[3][3] = xxxxxxxx
+
+[TEST] MMA with accumulator C != 0
+  D[0][0] = xxxxxxxx (should be ~K+1=5.0)
+  D[0][1] = xxxxxxxx (should be ~K+1=5.0)
+  D[0][2] = xxxxxxxx (should be ~K+1=5.0)
+  D[0][3] = xxxxxxxx (should be ~K+1=5.0)
+  D[1][0] = xxxxxxxx (should be ~K+1=5.0)
+  D[1][1] = xxxxxxxx (should be ~K+1=5.0)
+  D[1][2] = xxxxxxxx (should be ~K+1=5.0)
+  D[1][3] = xxxxxxxx (should be ~K+1=5.0)
+  D[2][0] = xxxxxxxx (should be ~K+1=5.0)
+  D[2][1] = xxxxxxxx (should be ~K+1=5.0)
+  D[2][2] = xxxxxxxx (should be ~K+1=5.0)
+  D[2][3] = xxxxxxxx (should be ~K+1=5.0)
+  D[3][0] = xxxxxxxx (should be ~K+1=5.0)
+  D[3][1] = xxxxxxxx (should be ~K+1=5.0)
+  D[3][2] = xxxxxxxx (should be ~K+1=5.0)
+  D[3][3] = xxxxxxxx (should be ~K+1=5.0)
+
+========================================
+ Tensor Core test complete
+========================================
+✅ MMA operations executed successfully
+tb/tb_tensor_core.sv:134: $finish called at 43000 (1ps)

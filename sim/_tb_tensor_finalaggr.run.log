@@ -1,0 +1,45 @@
+========================================
+ AGNI TB: Tensor Core Strict MMA Test (4x4x4)
+========================================
+
+[TEST] MMA(A=1, B=1, C=0)
+[PASS] MMA(A=1,B=1,C=0) D[0][0] = 40800000
+[PASS] MMA(A=1,B=1,C=0) D[0][1] = 40800000
+[PASS] MMA(A=1,B=1,C=0) D[0][2] = 40800000
+[PASS] MMA(A=1,B=1,C=0) D[0][3] = 40800000
+[PASS] MMA(A=1,B=1,C=0) D[1][0] = 40800000
+[PASS] MMA(A=1,B=1,C=0) D[1][1] = 40800000
+[PASS] MMA(A=1,B=1,C=0) D[1][2] = 40800000
+[PASS] MMA(A=1,B=1,C=0) D[1][3] = 40800000
+[PASS] MMA(A=1,B=1,C=0) D[2][0] = 40800000
+[PASS] MMA(A=1,B=1,C=0) D[2][1] = 40800000
+[PASS] MMA(A=1,B=1,C=0) D[2][2] = 40800000
+[PASS] MMA(A=1,B=1,C=0) D[2][3] = 40800000
+[PASS] MMA(A=1,B=1,C=0) D[3][0] = 40800000
+[PASS] MMA(A=1,B=1,C=0) D[3][1] = 40800000
+[PASS] MMA(A=1,B=1,C=0) D[3][2] = 40800000
+[PASS] MMA(A=1,B=1,C=0) D[3][3] = 40800000
+
+[TEST] MMA(A=1, B=1, C=1)
+[PASS] MMA(A=1,B=1,C=1) D[0][0] = 40a00000
+[PASS] MMA(A=1,B=1,C=1) D[0][1] = 40a00000
+[PASS] MMA(A=1,B=1,C=1) D[0][2] = 40a00000
+[PASS] MMA(A=1,B=1,C=1) D[0][3] = 40a00000
+[PASS] MMA(A=1,B=1,C=1) D[1][0] = 40a00000
+[PASS] MMA(A=1,B=1,C=1) D[1][1] = 40a00000
+[PASS] MMA(A=1,B=1,C=1) D[1][2] = 40a00000
+[PASS] MMA(A=1,B=1,C=1) D[1][3] = 40a00000
+[PASS] MMA(A=1,B=1,C=1) D[2][0] = 40a00000
+[PASS] MMA(A=1,B=1,C=1) D[2][1] = 40a00000
+[PASS] MMA(A=1,B=1,C=1) D[2][2] = 40a00000
+[PASS] MMA(A=1,B=1,C=1) D[2][3] = 40a00000
+[PASS] MMA(A=1,B=1,C=1) D[3][0] = 40a00000
+[PASS] MMA(A=1,B=1,C=1) D[3][1] = 40a00000
+[PASS] MMA(A=1,B=1,C=1) D[3][2] = 40a00000
+[PASS] MMA(A=1,B=1,C=1) D[3][3] = 40a00000
+
+========================================
+ Results: 32 PASS, 0 FAIL
+========================================
+PASS: Tensor core strict checks passed
+tb/tb_tensor_core.sv:142: $finish called at 43000 (1ps)

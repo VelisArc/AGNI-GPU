@@ -1,0 +1,32 @@
+========================================
+ AGNI TB: GPU Top-Level Smoke Test
+ 16 GPCs × 16 SMs = 256 SMs
+ 12 HBM4 Controllers
+ 4×8 NoC Mesh (32 routers)
+========================================
+
+--- Phase 1: Reset Sequence ---
+  Reset de-asserted
+
+--- Phase 2: Post-Reset Validation ---
+[PASS] No fatal error
+[PASS] ECC CE count = 0
+[PASS] ECC UE count = 0
+[PASS] Thermal zone = SAFE
+
+--- Phase 3: Thermal Zone Classification ---
+[PASS] Thermal NORMAL at 70°C
+[PASS] Thermal THROTTLE at 78°C
+[PASS] Thermal EMERGENCY at 90°C
+[PASS] Thermal SAFE at 40°C
+
+--- Phase 4: Stability (100 cycles) ---
+[PASS] Stable: no fatal error
+[PASS] Stable: ECC CE = 0
+[PASS] Stable: ECC UE = 0
+
+========================================
+ Results: 11 PASS, 0 FAIL
+========================================
+✅ GPU TOP-LEVEL SMOKE TEST PASSED
+tb/tb_agni_gpu_top.sv:144: $finish called at 68928 (1ps)

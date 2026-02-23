@@ -1,0 +1,131 @@
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:23:26: Parameter is not used: 'TOTAL_SMS'
+                                                   : ... note: In instance 'int32_alu'
+   23 |   parameter int unsigned TOTAL_SMS         = NUM_GPCS * SM_PER_GPC;  
+      |                          ^~~~~~~~~
+                      ... For warning description see https://verilator.org/warn/UNUSEDPARAM?v=5.045
+                      ... Use "/* verilator lint_off UNUSEDPARAM */" and lint_on around source to disable this message.
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:28:26: Parameter is not used: 'MAX_THREADS_PER_SM'
+                                                   : ... note: In instance 'int32_alu'
+   28 |   parameter int unsigned MAX_THREADS_PER_SM = MAX_WARPS_PER_SM * WARP_SIZE;  
+      |                          ^~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:29:26: Parameter is not used: 'WARP_SCHEDULERS'
+                                                   : ... note: In instance 'int32_alu'
+   29 |   parameter int unsigned WARP_SCHEDULERS   = 4;
+      |                          ^~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:30:26: Parameter is not used: 'MAX_BLOCKS_PER_SM'
+                                                   : ... note: In instance 'int32_alu'
+   30 |   parameter int unsigned MAX_BLOCKS_PER_SM = 32;
+      |                          ^~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:33:26: Parameter is not used: 'NUM_FP32_PER_SM'
+                                                   : ... note: In instance 'int32_alu'
+   33 |   parameter int unsigned NUM_FP32_PER_SM   = 128;
+      |                          ^~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:34:26: Parameter is not used: 'NUM_INT32_PER_SM'
+                                                   : ... note: In instance 'int32_alu'
+   34 |   parameter int unsigned NUM_INT32_PER_SM  = 128;
+      |                          ^~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:35:26: Parameter is not used: 'NUM_FP64_PER_SM'
+                                                   : ... note: In instance 'int32_alu'
+   35 |   parameter int unsigned NUM_FP64_PER_SM   = 2;
+      |                          ^~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:36:26: Parameter is not used: 'NUM_TC_PER_SM'
+                                                   : ... note: In instance 'int32_alu'
+   36 |   parameter int unsigned NUM_TC_PER_SM     = 8;    
+      |                          ^~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:37:26: Parameter is not used: 'NUM_SFU_PER_SM'
+                                                   : ... note: In instance 'int32_alu'
+   37 |   parameter int unsigned NUM_SFU_PER_SM    = 16;
+      |                          ^~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:38:26: Parameter is not used: 'NUM_LSU_PER_SM'
+                                                   : ... note: In instance 'int32_alu'
+   38 |   parameter int unsigned NUM_LSU_PER_SM    = 32;   
+      |                          ^~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:45:26: Parameter is not used: 'REGS_PER_BANK'
+                                                   : ... note: In instance 'int32_alu'
+   45 |   parameter int unsigned REGS_PER_BANK     = REGS_PER_SM / REG_BANKS;
+      |                          ^~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:48:26: Parameter is not used: 'L1_SIZE_KB'
+                                                   : ... note: In instance 'int32_alu'
+   48 |   parameter int unsigned L1_SIZE_KB        = 128;   
+      |                          ^~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:49:26: Parameter is not used: 'SMEM_SIZE_KB'
+                                                   : ... note: In instance 'int32_alu'
+   49 |   parameter int unsigned SMEM_SIZE_KB      = 128;   
+      |                          ^~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:50:26: Parameter is not used: 'L1_WAYS'
+                                                   : ... note: In instance 'int32_alu'
+   50 |   parameter int unsigned L1_WAYS           = 4;
+      |                          ^~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:51:26: Parameter is not used: 'L1_LINE_BYTES'
+                                                   : ... note: In instance 'int32_alu'
+   51 |   parameter int unsigned L1_LINE_BYTES     = 128;
+      |                          ^~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:55:26: Parameter is not used: 'L2_SLICE_KB'
+                                                   : ... note: In instance 'int32_alu'
+   55 |   parameter int unsigned L2_SLICE_KB       = (L2_TOTAL_MB * 1024) / L2_SLICES;  
+      |                          ^~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:56:26: Parameter is not used: 'L2_WAYS'
+                                                   : ... note: In instance 'int32_alu'
+   56 |   parameter int unsigned L2_WAYS           = 16;
+      |                          ^~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:57:26: Parameter is not used: 'L2_LINE_BYTES'
+                                                   : ... note: In instance 'int32_alu'
+   57 |   parameter int unsigned L2_LINE_BYTES     = 128;
+      |                          ^~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:60:26: Parameter is not used: 'HBM_STACKS'
+                                                   : ... note: In instance 'int32_alu'
+   60 |   parameter int unsigned HBM_STACKS        = 6;
+      |                          ^~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:63:26: Parameter is not used: 'HBM_TOTAL_BUS'
+                                                   : ... note: In instance 'int32_alu'
+   63 |   parameter int unsigned HBM_TOTAL_BUS     = HBM_CONTROLLERS * HBM_BUS_WIDTH;  
+      |                          ^~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:64:26: Parameter is not used: 'HBM_CAPACITY_GB'
+                                                   : ... note: In instance 'int32_alu'
+   64 |   parameter int unsigned HBM_CAPACITY_GB   = 288;
+      |                          ^~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:68:26: Parameter is not used: 'NOC_VC_COUNT'
+                                                   : ... note: In instance 'int32_alu'
+   68 |   parameter int unsigned NOC_VC_COUNT      = 4;     
+      |                          ^~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:69:26: Parameter is not used: 'NOC_MESH_ROWS'
+                                                   : ... note: In instance 'int32_alu'
+   69 |   parameter int unsigned NOC_MESH_ROWS     = 4;
+      |                          ^~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:70:26: Parameter is not used: 'NOC_MESH_COLS'
+                                                   : ... note: In instance 'int32_alu'
+   70 |   parameter int unsigned NOC_MESH_COLS     = 8;
+      |                          ^~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:71:26: Parameter is not used: 'NOC_PORTS'
+                                                   : ... note: In instance 'int32_alu'
+   71 |   parameter int unsigned NOC_PORTS         = 5;     
+      |                          ^~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:74:26: Parameter is not used: 'PCIE_LANES'
+                                                   : ... note: In instance 'int32_alu'
+   74 |   parameter int unsigned PCIE_LANES        = 16;
+      |                          ^~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:75:26: Parameter is not used: 'PCIE_GEN'
+                                                   : ... note: In instance 'int32_alu'
+   75 |   parameter int unsigned PCIE_GEN          = 6;
+      |                          ^~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:76:26: Parameter is not used: 'NVLINK_LANES'
+                                                   : ... note: In instance 'int32_alu'
+   76 |   parameter int unsigned NVLINK_LANES      = 18;
+      |                          ^~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:79:26: Parameter is not used: 'CORE_CLK_BASE_MHZ'
+                                                   : ... note: In instance 'int32_alu'
+   79 |   parameter int unsigned CORE_CLK_BASE_MHZ  = 1800;
+      |                          ^~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:80:26: Parameter is not used: 'CORE_CLK_BOOST_MHZ'
+                                                   : ... note: In instance 'int32_alu'
+   80 |   parameter int unsigned CORE_CLK_BOOST_MHZ = 2600;
+      |                          ^~~~~~~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:81:26: Parameter is not used: 'MEM_CLK_MHZ'
+                                                   : ... note: In instance 'int32_alu'
+   81 |   parameter int unsigned MEM_CLK_MHZ        = 2400;
+      |                          ^~~~~~~~~~~
+%Warning-UNUSEDPARAM: rtl/include\agni_pkg.sv:82:26: Parameter is not used: 'FABRIC_CLK_MHZ'
+                                                   : ... note: In instance 'int32_alu'
+   82 |   parameter int unsigned FABRIC_CLK_MHZ     = 2000;
+      |                          ^~~~~~~~~~~~~~
+%Error: Exiting due to 32 warning(s)

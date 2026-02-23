@@ -1,0 +1,23 @@
+========================================
+ AGNI TB: Warp Scheduler Test (4 warps)
+========================================
+
+--- Activate 2 warps ---
+[PASS] Fetch request generated
+
+--- Feed instruction to warp 0 ---
+  dispatch_valid=0 dispatch_ready=0
+
+--- Scoreboard: feed instruction with RAW hazard ---
+
+--- Writeback clears scoreboard ---
+  Writeback sent for warp 0, reg 1
+
+--- Barrier test ---
+  Barrier released for warp 0
+
+========================================
+ Results: 1 PASS, 0 FAIL
+========================================
+✅ ALL TESTS PASSED
+tb/tb_warp_scheduler.sv:136: $finish called at 71000 (1ps)

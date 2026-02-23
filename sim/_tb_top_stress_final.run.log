@@ -1,0 +1,9 @@
+========================================
+ AGNI TB: GPU Top-Level Stress
+========================================
+[PASS] No X-propagation or invalid status observed in randomized stress
+========================================
+ Results: 1 PASS, 0 FAIL
+========================================
+PASS: Top stress passed
+tb/tb_agni_gpu_top_stress.sv:127: $finish called at 483648 (1ps)

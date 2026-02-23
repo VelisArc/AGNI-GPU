@@ -1,0 +1,21 @@
+========================================
+ AGNI TB: NoC Router Test (at X=1,Y=1)
+========================================
+
+--- Route to East (dst_x=5 > cur_x=1) ---
+[PASS] East route: valid on port 2
+
+--- Route to West (dst_x=0 < cur_x=1) ---
+[PASS] West route: valid on port 3
+
+--- Route to North (dst_y=0 < cur_y=1) ---
+[PASS] North route: valid on port 0
+
+--- Route to Local (dst=self) ---
+[PASS] Local route: valid on port 4
+
+========================================
+ Results: 4 PASS, 0 FAIL
+========================================
+ALL TESTS PASSED
+tb/tb_noc_router.sv:128: $finish called at 47000 (1ps)
