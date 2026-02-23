@@ -1,3 +1,11 @@
+FINAL PRODUCTION TEST REPORT
+Generated: 2026-02-23 00:28:03
+
+COMMENT/DUMMY SCAN
+Source comments: NONE detected
+Dummy keywords: NONE detected
+
+AGGRESSIVE 8-TEST MATRIX
 
 Test             Compile CompileWarnings Run  RunWarnings
 ----             ------- --------------- ---  -----------
@@ -12,3 +20,12 @@ tb_top_stress    PASS                  0 PASS           0
 
 
 
+
+CORE FLOWS
+92: Test Summary: PASS=3 FAIL=0
+81: LINT RESULTS: 49 PASS / 0 FAIL / 49 TOTAL
+make lint: PASS (see sim/_make_lint_finalclean.log)
+make sim: PASS (see sim/_make_sim_finalclean.log)
+
+RESULT
+All executed final flows passed with zero warning/error lines in final logs.

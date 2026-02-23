@@ -1,0 +1,84 @@
+=====================================================
+ AGNI GPU - Industry-Standard RTL Lint (Syntax Check)
+ Tool: IcarusVerilog v12 (-g2012)
+ Date: 22-02-2026 21:10:56.47
+=====================================================
+
+[Phase 1] Common Primitives + Package
+-----------------------------------------------
+  [PASS] rtl/include/agni_pkg.sv
+  [PASS] rtl/common/fifo.sv
+  [PASS] rtl/common/async_fifo.sv
+  [PASS] rtl/common/ram_sp.sv
+  [PASS] rtl/common/ram_dp.sv
+  [PASS] rtl/common/arbiter_rr.sv
+  [PASS] rtl/common/cdc_sync.sv
+  [PASS] rtl/common/reset_sync.sv
+  [PASS] rtl/common/encoder_onehot.sv
+  [PASS] rtl/common/decoder_onehot.sv
+
+[Phase 2] Compute Units
+-----------------------------------------------
+  [PASS] rtl/compute/fma_unit.sv
+  [PASS] rtl/compute/int32_alu.sv
+  [PASS] rtl/compute/sfu.sv
+  [PASS] rtl/compute/tensor_core.sv
+  [PASS] rtl/compute/fp32_alu.sv
+
+[Phase 3] SM Core
+-----------------------------------------------
+  [PASS] rtl/sm/warp_scheduler.sv
+  [PASS] rtl/sm/dispatch_unit.sv
+  [PASS] rtl/sm/operand_collector.sv
+  [PASS] rtl/sm/simt_stack.sv
+  [PASS] rtl/sm/icache.sv
+  [PASS] rtl/sm/fetch_unit.sv
+  [PASS] rtl/sm/mem_coalescer.sv
+  [PASS] rtl/sm/atomic_unit.sv
+  [PASS] rtl/sm/register_mapper.sv
+  [PASS] rtl/sm/lsu.sv
+  [PASS] rtl/sm/register_file.sv
+
+[Phase 4] Memory Subsystem
+-----------------------------------------------
+  [PASS] rtl/memory/ecc_encoder.sv
+  [PASS] rtl/memory/ecc_decoder.sv
+  [PASS] rtl/memory/chipkill_ecc.sv
+  [PASS] rtl/memory/tag_array.sv
+  [PASS] rtl/memory/tlb.sv
+  [PASS] rtl/memory/page_table_walker.sv
+  [PASS] rtl/memory/coherence_controller.sv
+  [PASS] rtl/memory/coherence_directory.sv
+  [PASS] rtl/memory/l1_cache.sv
+  [PASS] rtl/memory/l2_cache_slice.sv
+  [PASS] rtl/memory/hbm4_controller.sv
+
+[Phase 5] NoC
+-----------------------------------------------
+  [PASS] rtl/noc/noc_router.sv
+  [PASS] rtl/noc/noc_mesh.sv
+
+[Phase 6] Power + Clock
+-----------------------------------------------
+  [PASS] rtl/power/clock_gate.sv
+  [PASS] rtl/power/dvfs_controller.sv
+  [PASS] rtl/power/thermal_monitor.sv
+  [PASS] rtl/power/pll_model.sv
+  [PASS] rtl/power/clock_divider.sv
+
+[Phase 7] DFT + I/O PHY
+-----------------------------------------------
+  [PASS] rtl/dft/scan_wrapper.sv
+  [PASS] rtl/io/pcie_gen6_phy.sv
+  [PASS] rtl/io/nvlink_phy.sv
+  [PASS] rtl/io/hbm_phy.sv
+
+[Phase 8] Top-Level Integration
+-----------------------------------------------
+  [PASS] gpc.sv (with dependencies)
+
+=====================================================
+ LINT RESULTS: 49 PASS / 0 FAIL / 49 TOTAL
+=====================================================
+ ALL MODULES PASSED LINT
+

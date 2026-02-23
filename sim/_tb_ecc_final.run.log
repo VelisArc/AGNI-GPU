@@ -1,0 +1,39 @@
+========================================
+ AGNI TB: ECC Encoder/Decoder Test
+========================================
+
+--- No Error ---
+[PASS] T1: No-error: data preserved
+[PASS] T2: No-error: type=NONE
+
+--- Single-Bit Error Correction ---
+  Tested 20 single-bit flips
+
+--- Double-Bit Error Detection ---
+[PASS] T3: Double-bit: detected
+
+--- Edge Case: All Zeros ---
+[PASS] T4: All-zeros: preserved
+[PASS] T5: All-zeros: no error
+
+--- Edge Case: All Ones ---
+[PASS] T6: All-ones: preserved
+[PASS] T7: All-ones: no error
+
+--- Random Patterns (10 iterations) ---
+[PASS] T8: Random 0: preserved
+[PASS] T9: Random 1: preserved
+[PASS] T10: Random 2: preserved
+[PASS] T11: Random 3: preserved
+[PASS] T12: Random 4: preserved
+[PASS] T13: Random 5: preserved
+[PASS] T14: Random 6: preserved
+[PASS] T15: Random 7: preserved
+[PASS] T16: Random 8: preserved
+[PASS] T17: Random 9: preserved
+
+========================================
+ Results: 37 PASS, 0 FAIL
+========================================
+✅ ALL TESTS PASSED
+tb/tb_ecc.sv:127: $finish called at 520000 (1ps)

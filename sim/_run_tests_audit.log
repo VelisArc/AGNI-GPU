@@ -1,0 +1,93 @@
+==========================================
+ AGNI GPU - Running All Tests
+==========================================
+
+[1/3] Compiling minimal test...
+[OK] Compiled. Running...
+==========================================
+ AGNI: IcarusVerilog basic test
+==========================================
+[PASS] IcarusVerilog is working!
+==========================================
+tb/tb_minimal.v:16: $finish called at 10000 (1ps)
+
+[2/3] Compiling FIFO test...
+[OK] Compiled. Running...
+==========================================
+ AGNI TB: FIFO Smoke Test (DEPTH=8)
+==========================================
+[PASS] Empty on reset
+[PASS] Not full on reset
+
+[TEST] Fill FIFO to capacity (8)
+[PASS] Full after fill
+
+[TEST] Drain FIFO and check FIFO ordering
+[PASS] Empty after drain
+
+[TEST] Simultaneous R/W (steady state)
+[PASS] Count stable after sim R/W (count=4)
+
+==========================================
+ Results: 13 PASS, 0 FAIL
+==========================================
+>> ALL TESTS PASSED <<
+tb/tb_fifo.sv:109: $finish called at 79000 (1ps)
+
+[3/3] Compiling INT32 ALU test...
+[OK] Compiled. Running...
+========================================
+ AGNI TB: INT32 ALU Test
+========================================
+
+--- Arithmetic ---
+[PASS] T1: ADD 100+200 (00000064 op 000000c8) = 0000012c
+[PASS] T2: ADD overflow wrap (ffffffff op 00000001) = 00000000
+[PASS] T3: SUB 500-200 (000001f4 op 000000c8) = 0000012c
+[PASS] T4: SUB underflow (00000000 op 00000001) = ffffffff
+[PASS] T5: MUL 7*6 (00000007 op 00000006) = 0000002a
+[PASS] T6: MUL 0*x (00000000 op 00003039) = 00000000
+
+--- Logic ---
+[PASS] T7: AND (ff00ff00 op 0f0f0f0f) = 0f000f00
+[PASS] T8: OR (ff00ff00 op 0f0f0f0f) = ff0fff0f
+[PASS] T9: XOR (aaaaaaaa op 55555555) = ffffffff
+[PASS] T10: XOR self=0 (ffffffff op ffffffff) = 00000000
+
+--- Shifts ---
+[PASS] T11: SHL 1<<4 (00000001 op 00000004) = 00000010
+[PASS] T12: SHL with MSB (80000001 op 00000001) = 00000002
+[PASS] T13: SHR 0x10>>4 (00000010 op 00000004) = 00000001
+[PASS] T14: SHRA sign extend (80000000 op 00000004) = f8000000
+[PASS] T15: SHRA positive (40000000 op 00000004) = 04000000
+
+--- Comparisons ---
+[PASS] T16: EQ true (0000002a op 0000002a) = ffffffff
+[PASS] T17: EQ false (0000002a op 0000002b) = 00000000
+[PASS] T18: LT -2<1 (signed) (fffffffe op 00000001) = ffffffff
+[PASS] T19: LT 5<3 false (00000005 op 00000003) = 00000000
+[PASS] T20: LE 5<=5 true (00000005 op 00000005) = ffffffff
+
+--- Min/Max ---
+[PASS] T21: MIN(10,20)=10 (0000000a op 00000014) = 0000000a
+[PASS] T22: MAX(10,20)=20 (0000000a op 00000014) = 00000014
+[PASS] T23: MIN(-10,10)=-10 (fffffff6 op 0000000a) = fffffff6
+
+--- ABS/NEG ---
+[PASS] T24: ABS(-10)=10 (fffffff6 op 00000000) = 0000000a
+[PASS] T25: ABS(10)=10 (0000000a op 00000000) = 0000000a
+[PASS] T26: NEG(1)=-1 (00000001 op 00000000) = ffffffff
+[PASS] T27: NEG(-1)=1 (ffffffff op 00000000) = 00000001
+
+--- NOP ---
+[PASS] T28: NOP passthrough (deadbeef op 00000000) = deadbeef
+
+========================================
+ Results: 28 PASS, 0 FAIL / 28 total
+========================================
+✅ ALL TESTS PASSED
+tb/tb_int32_alu.sv:131: $finish called at 185000 (1ps)
+
+==========================================
+ Test Summary: PASS=3 FAIL=0
+==========================================

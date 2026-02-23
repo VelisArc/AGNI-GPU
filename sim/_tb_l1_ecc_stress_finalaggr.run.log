@@ -1,0 +1,22 @@
+========================================
+ AGNI TB: L1 Cache ECC Stress
+========================================
+[PASS] Tag allocated in set0
+[PASS] Lookup pulse captured
+[PASS] Tag hit during lookup
+[PASS] FSM in LOOKUP state
+[PASS] Clean hit
+[PASS] Clean response has no UE
+[PASS] Clean response CE low
+[PASS] Clean response UE low
+[PASS] Single-bit => CE asserted
+[PASS] Single-bit => UE clear
+[PASS] Single-bit => resp.error clear
+[PASS] Double-bit => CE clear
+[PASS] Double-bit => UE asserted
+[PASS] Double-bit => resp.error set
+========================================
+ Results: 14 PASS, 0 FAIL
+========================================
+PASS: L1 ECC stress passed
+tb/tb_l1_cache_ecc_stress.sv:204: $finish called at 16502 (1ps)
