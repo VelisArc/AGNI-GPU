@@ -1,0 +1,57 @@
+// ============================================================================
+// Project AGNI — Verilator Lint Waiver Configuration
+// File: lint/lint_config.vlt
+// Description: Lint waivers for known-acceptable patterns.
+//              Only waive what is architecturally justified.
+// ============================================================================
+
+`verilator_config
+
+// ---------------------------------------------------------------------------
+// Global defaults
+// ---------------------------------------------------------------------------
+// Treat all files as SystemVerilog
+language 1800-2017
+
+// ---------------------------------------------------------------------------
+// Width mismatch waivers (parameterized designs legitimately mix widths)
+// ---------------------------------------------------------------------------
+lint_off -rule WIDTH -file "*/agni_pkg.sv"
+lint_off -rule WIDTH -file "*/fma_unit.sv"      // FP mantissa/exponent width mixing
+lint_off -rule WIDTH -file "*/tensor_core.sv"    // FP16→FP32 width conversions
+lint_off -rule WIDTH -file "*/chipkill_ecc.sv"   // GF(2^32) arithmetic
+lint_off -rule WIDTH -file "*/ecc_encoder.sv"    // Hamming position arithmetic
+lint_off -rule WIDTH -file "*/ecc_decoder.sv"
+
+// ---------------------------------------------------------------------------
+// Unused signal waivers (architectural ports not yet connected in stubs)
+// ---------------------------------------------------------------------------
+lint_off -rule UNUSED -file "*/agni_gpu_top.sv"  // PCIe/NVLink stubs
+lint_off -rule UNUSED -file "*/streaming_multiprocessor.sv" // Not all TC/SFU ports used
+
+// ---------------------------------------------------------------------------
+// Undriven waivers (same reason: stub interfaces)
+// ---------------------------------------------------------------------------
+lint_off -rule UNDRIVEN -file "*/agni_gpu_top.sv"
+
+// ---------------------------------------------------------------------------
+// Case statement waivers (intentional default catches)
+// ---------------------------------------------------------------------------
+lint_off -rule CASEINCOMPLETE -file "*/dispatch_unit.sv"
+lint_off -rule CASEINCOMPLETE -file "*/dvfs_controller.sv"
+
+// ---------------------------------------------------------------------------
+// Latch inference (clock_gate uses intentional latch)
+// ---------------------------------------------------------------------------
+lint_off -rule LATCH -file "*/clock_gate.sv"
+
+// ---------------------------------------------------------------------------
+// Unpacked array waivers (SV unpacked arrays for readability)
+// ---------------------------------------------------------------------------
+lint_off -rule UNPACKED -file "*/tensor_core.sv"
+lint_off -rule UNPACKED -file "*/noc_mesh.sv"
+
+// ---------------------------------------------------------------------------
+// Multidriven waivers (multiple always blocks driving same signal by design)
+// ---------------------------------------------------------------------------
+lint_off -rule MULTIDRIVEN -file "*/hbm4_controller.sv"
