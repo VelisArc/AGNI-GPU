@@ -1,4 +1,4 @@
-# 🔥 Project AGNI — God-Level GPU for 100 Billion Parameter AI
+# 🔥 Project AGNI — GPU for 100 Billion Parameter AI
 
 > **Codename: AGNI** — A single monolithic GPU designed to run 100B+ parameter AI models with unrestricted power and 10+ year reliability.
 
