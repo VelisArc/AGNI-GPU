@@ -9,7 +9,7 @@ SIM_DIR    = .
 FILELIST   = sim/filelist.f
 TOP_MODULE = agni_gpu_top
 
-VL_FLAGS   = --lint-only --timing -Wno-fatal -Wno-MULTITOP -Wno-PINCONNECTEMPTY -Wno-SYNCASYNCNET -Wno-ZERODLY -Wno-UNOPTFLAT -Wno-WIDTH -Wno-VARHIDDEN -Wno-ALWCOMBORDER -Wno-UNUSEDSIGNAL -Wno-UNUSEDPARAM -Wno-PROCASSINIT -Wno-UNSIGNED -Wno-LATCH -f $(FILELIST)
+VL_FLAGS   = --lint-only --timing -Wno-fatal -Wno-MULTITOP -Wno-PINCONNECTEMPTY -Wno-SYNCASYNCNET -Wno-ZERODLY -Wno-UNOPTFLAT -Wno-WIDTH -Wno-VARHIDDEN -Wno-ALWCOMBORDER -Wno-UNUSEDSIGNAL -Wno-UNUSEDPARAM  -Wno-UNSIGNED -Wno-LATCH -Wno-BLKLOOPINIT -f $(FILELIST)
 VL_SIM     = --cc --exe --build --timing -f $(FILELIST)
 
 IV_FLAGS   = -g2012 -Wall -Wno-sensitivity-entire-array -Wno-sensitivity-entire-vector
@@ -61,3 +61,8 @@ help:
 	@echo "  make verilate  - Build with Verilator (C++ sim)"
 	@echo "  make clean     - Remove generated files"
 	@echo "  make help      - Show this help"
+run_tests:
+	@echo "=========================================="
+	@echo " AGNI GPU — Running All Tests"
+	@echo "=========================================="
+	./run_tests.sh

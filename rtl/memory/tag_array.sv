@@ -90,12 +90,12 @@ module tag_array #(
   always_ff @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
       for (int s = 0; s < NUM_SETS; s++) begin
+        lru_bits[s] <= '0;
         for (int w = 0; w < NUM_WAYS; w++) begin
           tag_valid[s][w] <= 1'b0;
           tag_dirty[s][w] <= 1'b0;
           tag_data[s][w]  <= '0;
         end
-        lru_bits[s] <= '0;
       end
     end else begin
 

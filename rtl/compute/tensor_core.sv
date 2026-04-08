@@ -165,9 +165,11 @@ module tensor_core
 
   always_ff @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
-      for (int m = 0; m < TILE_M; m++)
-        for (int n = 0; n < TILE_N; n++)
+      for (int m = 0; m < TILE_M; m++) begin
+        for (int n = 0; n < TILE_N; n++) begin
           accum[m][n] <= '0;
+        end
+      end
     end else begin
       case (state)
         TC_IDLE: begin

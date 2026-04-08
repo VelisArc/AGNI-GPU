@@ -1,0 +1,4 @@
+sim/*.vvp
+sim/run_all.sh
+run_all.sh
+sim/agni_sim
